@@ -45,7 +45,7 @@
 							<!-- optional parameters -->
 							<!-- <rootFolder></rootFolder> -->
 							<rootFolders>
-								<!--linux>RedHatEL-7/x86_64/bin</linux-->
+								<linux>${tycho.product.id}</linux>
 								<win32>${tycho.product.id}</win32>
 							</rootFolders>
 							<archiveFileName>${tycho.product.id}_${qualifiedVersion}</archiveFileName>
