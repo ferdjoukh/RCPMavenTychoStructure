@@ -5,8 +5,7 @@ author: "Adel Ferdjoukh"
 institute: "Altran Technologies"
 topic: "Eclipse RCP, Maven Tycho"
 theme: "Frankfurt"
-colortheme: "beaver"
-fonttheme: "professionalfonts"
+colortheme: "default"
 mainfont: "Hack Nerd Font"
 fontsize: 11pt
 urlcolor: red
@@ -18,23 +17,23 @@ section-titles: false
 toc: true
 ---
 
-
-# Content
+## Table of contents
 
 1. [About this tutorial](#about-this-tutorial)
 1. [Template Project](#template-Project)
-1. [Build the RCP Project](#build-the-rcp-project)
 1. [Anatomy of an RCP project](#anatomy-of-an-rcp-project)
-1. [Create a Project Step by Step](#create-a-project-step-by-step)
+1. [Project Step by Step](#project-step-by-step)
 1. [Tips](#tips)
 	
 # About this tutorial {.allowframebreaks}
 
-## Context
+## About this tutorial {.allowframebreaks}
+
+### Context
 
 Very often, developers arrive on a huge RCP project with already thousands of lines of code. It is not always easy to start an RCP project from scratch. Especially if one wants to use a build tool such as Maven/Tycho.
 
-## Objectives
+### Objectives
 
 - Learn how to start an RCP project from scratch
 - Understand the function of each plugin of an RCP project
@@ -42,15 +41,15 @@ Very often, developers arrive on a huge RCP project with already thousands of li
 - Give a ready-to-use template for RCP projet with Maven/Tycho integration
 - Discover use useful tips
 
-## Duration 
+### Duration 
 
 2-3 hours
 
-## Target Audience
+### Target Audience
 
 Software Developers in Java, Eclipse RCP and Model Driven Engineering
 
-## Prerequisite
+### Prerequisite
 
 - Your computer
 - Download the latest version of Eclipse (google search). Among the available packages, you can choose the following : 
@@ -59,19 +58,22 @@ Software Developers in Java, Eclipse RCP and Model Driven Engineering
 - Programming in Java and OOP
 - Some Maven knowloedge
 
-## Related Topics
+### Related Topics
 
 MDE Foundations Training by the same Author
 
 # Template Project
 
+## Template Project
+
 In order to fully understand this tutorial, we created a example of RCP project with the Maven/Tycho integration
 
-## Github repository
+### Github repository
 
 git clone https://github.com/ferdjoukh/RCPMavenTychoStructure.git
 
-# Build the RCP project
+
+## Build the RCP project
 
 1. Clone the git repository that contains the full example
 1. If your have installed maven in your computer, open a terminal and execute `mvn clean install`
@@ -83,9 +85,11 @@ After the success check the content of folder : *releng/org.example.awesomeProje
 
 This folder contains the zipped version of the built applications (for linux and windows).
 
-# Anatomy of an RCP Project {.allowframebreaks}
+# Anatomy of an RCP Project
 
-## Why Maven/Tycho ?
+## Anatomy of an RCP Project {.allowframebreaks}
+
+### Why Maven/Tycho ?
 
 Maven is used to automatically build, release and deliver your java project. In RCP since the projects contains tens of plugins, doing the build manually would be a mess. So the pair Maven/Tycho helps to automate the process.
 
@@ -111,9 +115,8 @@ Maven is used to automatically build, release and deliver your java project. In 
 		- pom.xml
 	- pom.xml
 
----
 
-**Parent project and pom.xml**
+### Parent project and pom.xml
 
 It contains the parent maven definition of your whole project. It is composed of 4 modules : *bundles*, *features*, *releng* and *tests*.
 
@@ -145,13 +148,18 @@ A folder that contains all the projects that are mandatory to build your applica
 
 A folder that contains all the tests plug-ins of the project.	
 
-# Materialize and Archive Product {.allowframebreaks}
+
+## Materialize and Archive Product {.allowframebreaks}
+
 
 These are the most interesting plugins of Maven/Tycho, they are used to build and zip the eclipse product that results from the compilation of your application.
 
 To learn how to create these goals, check product *pom.xml* file 
 
-# Create a Project Step by Step {.allowframebreaks}
+# Project Step by Step
+
+## Create a Project Step by Step {.allowframebreaks}
+
 
 1. Create the parent project (plugin project)
 	- Call it org.example.awesomeProject
@@ -200,7 +208,10 @@ To learn how to create these goals, check product *pom.xml* file
 1. Build your product using maven
 	- Use goals : `clean install`
 
-# Tips {.allowframebreaks}
+# Tips
+
+## Tips {.allowframebreaks}
+
 
 1. **Include other files or folders in the final product**
 	- Copy you files into the features project
