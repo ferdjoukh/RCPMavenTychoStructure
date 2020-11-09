@@ -5,11 +5,7 @@ author: "Adel Ferdjoukh"
 institute: "Altran Technologies"
 topic: "Eclipse RCP, Maven Tycho"
 theme: "Frankfurt"
-colortheme: "default"
-mainfont: "Hack Nerd Font"
 fontsize: 11pt
-urlcolor: red
-linkstyle: bold
 aspectratio: 169
 titlegraphic: img/altran.png
 date: november 2020
