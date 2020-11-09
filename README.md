@@ -9,8 +9,24 @@
 1. [Create a Project Step by Step](#create-a-project-step-by-step)
 1. [Tips](#tips)
 	
-
 # About this tutorial
+
+**Context**
+
+Very often, developers arrive on a huge RCP project with already thousands of lines of code. It is not always easy to start an RCP project from scratch. Especially if one wants to use a build tool such as Maven/Tycho.
+
+**Objectives**
+
+# About this tutorial 2
+
+**Duration** 2-3 hours
+
+**Target Audience**:
+
+
+
+
+
 
 Some super quickly created demo slides
 
