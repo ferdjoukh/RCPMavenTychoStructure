@@ -14,6 +14,20 @@
    </configIni>
 
    <launcherArgs>
+      <programArgs>-consoleLog
+      </programArgs>
+      <programArgsWin>-vm JRE_1.8_181_64b\bin\javaw.exe
+      </programArgsWin>
+      <vmArgs>-Dosgi.requiredJavaVersion=1.8
+
+-XX:+UseG1GC
+
+-XX:+UseStringDeduplication
+
+-Xms256m
+
+-Xmx1024m
+      </vmArgs>
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
       </vmArgsMac>
    </launcherArgs>
@@ -30,10 +44,9 @@
       </win>
    </launcher>
 
-
    <vm>
+      <windows include="true">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8</windows>
    </vm>
-
 
    <plugins>
       <plugin id="com.ibm.icu"/>
