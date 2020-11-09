@@ -1,6 +1,23 @@
-% How to Create an Eclipse RCP project with Maven/Tycho Integration 
-% Adel Ferdjoukh
-% November 2020
+
+---
+title: "How to Create an Eclipse RCP project with Maven/Tycho Integration"
+author: "Adel Ferdjoukh"
+institute: "Altran Technologies"
+topic: "Eclipse RCP, Maven Tycho"
+theme: "Frankfurt"
+colortheme: "beaver"
+fonttheme: "professionalfonts"
+mainfont: "Hack Nerd Font"
+fontsize: 11pt
+urlcolor: red
+linkstyle: bold
+aspectratio: 169
+titlegraphic: img/altran.png
+date: november 2020
+section-titles: false
+toc: true
+---
+
 
 # Content
 
@@ -13,11 +30,11 @@
 	
 # About this tutorial {.allowframebreaks}
 
-**Context**
+## Context
 
 Very often, developers arrive on a huge RCP project with already thousands of lines of code. It is not always easy to start an RCP project from scratch. Especially if one wants to use a build tool such as Maven/Tycho.
 
-**Objectives**
+## Objectives
 
 - Learn how to start an RCP project from scratch
 - Understand the function of each plugin of an RCP project
@@ -25,13 +42,15 @@ Very often, developers arrive on a huge RCP project with already thousands of li
 - Give a ready-to-use template for RCP projet with Maven/Tycho integration
 - Discover use useful tips
 
-**Duration** 2-3 hours
+## Duration 
 
-**Target Audience**:
+2-3 hours
+
+## Target Audience
 
 Software Developers in Java, Eclipse RCP and Model Driven Engineering
 
-**Prerequisite**
+## Prerequisite
 
 - Your computer
 - Download the latest version of Eclipse (google search). Among the available packages, you can choose the following : 
@@ -40,7 +59,7 @@ Software Developers in Java, Eclipse RCP and Model Driven Engineering
 - Programming in Java and OOP
 - Some Maven knowloedge
 
-**Related Topics**
+## Related Topics
 
 MDE Foundations Training by the same Author
 
@@ -48,7 +67,7 @@ MDE Foundations Training by the same Author
 
 In order to fully understand this tutorial, we created a example of RCP project with the Maven/Tycho integration
 
-**Github repository**
+## Github repository
 
 git clone https://github.com/ferdjoukh/RCPMavenTychoStructure.git
 
@@ -66,9 +85,11 @@ This folder contains the zipped version of the built applications (for linux and
 
 # Anatomy of an RCP Project {.allowframebreaks}
 
-**Why Maven/Tycho ?**
+## Why Maven/Tycho ?
 
 Maven is used to automatically build, release and deliver your java project. In RCP since the projects contains tens of plugins, doing the build manually would be a mess. So the pair Maven/Tycho helps to automate the process.
+
+---
 
 **Tycho Layout**
 
@@ -90,6 +111,8 @@ Maven is used to automatically build, release and deliver your java project. In 
 		- pom.xml
 	- pom.xml
 
+---
+
 **Parent project and pom.xml**
 
 It contains the parent maven definition of your whole project. It is composed of 4 modules : *bundles*, *features*, *releng* and *tests*.
@@ -98,6 +121,8 @@ The parent project is a simple plug-in development project with a Maven nature. 
 
 It has the **pom** packaging maven option.
 
+---
+
 **Bundles**
 
 It is a folder that contains all the source-code plug-ins of your projects : model, generated code, GUI code, business code, etc. 
@@ -105,6 +130,8 @@ It is a folder that contains all the source-code plug-ins of your projects : mod
 **Features**
 
 A folder that contains the features projects of your application. A feature in the Eclipse ecosystem is a collection of plug-ins that accomplish a set of features.
+
+---
 
 **Releng**
 
