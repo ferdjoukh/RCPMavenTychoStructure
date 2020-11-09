@@ -1,3 +1,5 @@
+![CI](https://github.com/ferdjoukh/RCPMavenTychoStructure/workflows/CI/badge.svg)
+
 % How to Create an Eclipse RCP project with Maven/Tycho Integration 
 % Adel Ferdjoukh
 % November 2020
