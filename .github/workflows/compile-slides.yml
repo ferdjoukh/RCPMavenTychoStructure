@@ -30,6 +30,13 @@ jobs:
           sudo apt-get install texlive-full
           sudo apt-get install pandoc
           ./compile.sh
+
+      - name: Build product
+        run: |
+          echo "Build product"
+          cd org.example.awesomeProject
+          mvn clean install
+          cd ..
           
       - name: Archive production artifacts
         uses: actions/upload-artifact@v2

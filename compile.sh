@@ -1,3 +1,3 @@
 #!/bin/bash
 
-pandoc -t beamer README.md -o RCP-Maven-Tycho-Tutorial-Ferdjoukh.pdf
+pandoc -t beamer slides.md -o RCP-Maven-Tycho-Tutorial-Ferdjoukh.pdf
