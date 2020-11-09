@@ -27,7 +27,7 @@ jobs:
       - name: Compile Slides
         run: |
           echo "Compile slides"
-          sudo apt-get install texlive
+          sudo apt-get install texlive-full
           sudo apt-get install pandoc
           ./compile.sh
           
