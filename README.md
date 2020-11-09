@@ -62,7 +62,7 @@ git clone https://github.com/ferdjoukh/RCPMavenTychoStructure.git
 1. Choose goals : `clean install`
 1. The first build takes between 1 and 3 minutes depending on the machine 
 
-After the success check the content of folder : `releng/org.example.awesomeProject.product/target/products`
+After the success check the content of folder : *releng/org.example.awesomeProject.product/target/products*
 
 This folder contains the zipped version of the built applications (for linux and windows).
 
@@ -126,33 +126,6 @@ These are the most interesting plugins of Maven/Tycho, they are used to build an
 
 To learn how to create these goals, check product *pom.xml* file 
 
-```
-<plugin>
-	<groupId>org.eclipse.tycho</groupId>
-	<artifactId>tycho-p2-director-plugin</artifactId>
-	<version>${tycho.version}</version>
-	<executions>
-		<execution>
-			<!-- install the product using the p2 director -->
-			<id>materialize-products</id>
-			<goals>
-				<goal>materialize-products</goal>
-			</goals>
-		...
-			<!-- create zip file with the installed product -->
-			<id>archive-products</id>
-			<goals>
-				<goal>archive-products</goal>
-			</goals>
-		</execution>
-	</executions>
-	...
-					<linux>${tycho.product.id}</linux>
-					<win32>${tycho.product.id}</win32>
-				</rootFolders>
-...
-```
-
 # Create a Project Step by Step {.allowframebreaks}
 
 1. Create the parent project (plugin project)
@@ -174,7 +147,7 @@ To learn how to create these goals, check product *pom.xml* file
 
 1. Create a new plugin (stored in bundles folder) 
 	- name it : *org.example.awesomeProject.gui*
-	- Be carreful to the location of this plugin. Use : `.../org.example.awesomeProject/bundles/org.example.awesomeProject.gui/`
+	- Be carreful to the location of this plugin. Use : *.../org.example.awesomeProject/bundles/org.example.awesomeProject.gui/*
 
 1. Create a pom.xml file for bundles folder (use given example)	
 	- Add *gui* plugin to the list of modules
@@ -207,10 +180,10 @@ To learn how to create these goals, check product *pom.xml* file
 1. **Include other files or folders in the final product**
 	- Copy you files into the features project
 	- Open the build.properties files and copy the following lines
-	```
-	root.folder.examples = ./examples
-	root.win32.win32.x86_64.folder.JRE_1.8_181_64b= ./JRE_1.8_181_64b	
-	```
+```
+root.folder.examples = ./examples
+root.win32.win32.x86_64.folder.JRE_1.8_181_64b= ./JRE_1.8_181_64b
+```
 1. **Use a specific Java VM to run your product**
 	- Once your VM was identified (in the previous example, it is included with the source code)
 	- Manual : open the eclipse.ini file and add the lines
